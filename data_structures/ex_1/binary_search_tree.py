@@ -4,7 +4,7 @@ class BinarySearchTree:
     self.left = None
     self.right = None
 
-  def depth_first_for_each(self, cb = lambda x, y: x.append(y)):
+  def depth_first_for_each(self, cb):
     stack = []
     stack.append(self)
 
@@ -17,7 +17,7 @@ class BinarySearchTree:
         cb(current_node.value)
 
 
-  def breadth_first_for_each(self, cb = lambda x, y: x.append(y)):
+  def breadth_first_for_each(self, cb):
     queue = []
     queue.append(self)
 

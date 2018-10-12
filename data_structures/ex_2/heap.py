@@ -1,5 +1,15 @@
 def heapsort(arr):
- pass
+  heap = Heap()
+  sorted = [0 for i in range(len(arr))]
+
+  for elmnt in arr:
+    heap.insert(elmnt)
+
+  for i in range(len(arr)):
+      sorted[i] = heap.delete()
+
+  sorted.reverse()
+  return sorted
 
 
 class Heap:
@@ -42,16 +52,3 @@ class Heap:
       return index * 2 + 1
     else:
       return index * 2 + 1 if self.storage[index * 2 + 1] > self.storage[index * 2 + 2] else index * 2 + 2
-
-  def heapsort(self):
-      sortd = []
-      index = 0
-      while len(self.storage) > 0 and index * 2 + 2 <= len(self.storage):
-        sortd.append(self.storage[index])
-        if index * 2 + 2 == len(self.storage):
-          sortd.append(self.storage[index * 2 + 1])
-          index += 1
-        else:
-          sortd += self.storage[index * 2 + 1: index * 2 + 3]
-          index += 1
-      return sortd

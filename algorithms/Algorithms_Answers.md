@@ -4,7 +4,7 @@ Exercise I:
 
 a) O(n) - this seems to be linear, since a increases by n squared until it reaches n cubed. Perhaps it's O(n**2) but I don't think so.
 
-b) O(c)? It seems as though, in best case scenario, sum++ will only be run a max of 8 times per i in range of no more than 6.
+b) O(n^3)
 
 c) O(n) - this function looks similar to the Fibonacci seq function, but when played out, it will always return 2n.
 
